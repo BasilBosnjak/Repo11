@@ -9,10 +9,15 @@ var temps = [
 function myArrayFunction(arr) {
     var newTemps = [...arr];
     var averageDayTemp = [];
-    for (var i = 0; i < temps.length; i++ ) {
-        for ()
+    for (var i = 0; i < newTemps.length; i++ ) {
+        var sum = 0;
+        for (var j = 0; j < newTemps[i].length; j++) {
+            sum += newTemps[i][j];
+        }
+        averageDayTemp.push(sum / newTemps[i].length);
     }
-
     return averageDayTemp;
 }
-//not done
+
+console.log(myArrayFunction(temps));
+module.exports = myArrayFunction;
